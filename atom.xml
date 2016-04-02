@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vincentlau0493.github.io/"/>
-  <updated>2016-03-30T16:18:52.000Z</updated>
+  <updated>2016-03-31T00:55:18.000Z</updated>
   <id>http://vincentlau0493.github.io/</id>
   
   <author>
@@ -16,18 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>new post</title>
-    <link href="http://vincentlau0493.github.io/2016/03/30/new-post/"/>
-    <id>http://vincentlau0493.github.io/2016/03/30/new-post/</id>
-    <published>2016-03-30T16:15:04.000Z</published>
-    <updated>2016-03-30T16:18:52.000Z</updated>
+    <title>在这里开始我的中文博客</title>
+    <link href="http://vincentlau0493.github.io/2016/03/30/first-blog/"/>
+    <id>http://vincentlau0493.github.io/2016/03/30/first-blog/</id>
+    <published>2016-03-30T21:55:17.000Z</published>
+    <updated>2016-03-31T00:55:18.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;之前一直尝试着写英文的技术博客，由于每次还要考虑语法单词，写一篇耗时太长，所以没怎么坚持下来。然后中文社区的博客样式我又不喜欢，所以写博客这事一直搁浅了。今天终于搭建好自己的博客，hexo果然是个好东西，很方便快捷，也不用自己再去设计样式了。脑海里有很多想记录下来的东西，比如说各大网站的架构分析(twitter, weibo, wechat, pinterest, netflix, uber)， java的一些高级功能(independency injection, dagger)，多线程的并发控制(thread pool)等等，希望能找时间记下来。&lt;/p&gt;
+&lt;p&gt;在原来的博客中记录了很多前端的东西和一些算法的技巧，基本为了找工作。有时间也要把原来的&lt;a href=&quot;http://justjiayu.wordpress.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;英文博客&lt;/a&gt;migrate过来。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;</content>
     
     <summary type="html">
     
+      &lt;p&gt;之前一直尝试着写英文的技术博客，由于每次还要考虑语法单词，写一篇耗时太长，所以没怎么坚持下来。然后中文社区的博客样式我又不喜欢，所以写博客这事一直搁浅了。今天终于搭建好自己的博客，hexo果然是个好东西，很方便快捷，也不用自己再去设计样式了。脑海里有很多想记录下来的东西，比如说各大网站的架构分析(twitter, weibo, wechat, pinterest, netflix, uber)， java的一些高级功能(independency injection, dagger)，多线程的并发控制(thread pool)等等，希望能找时间记下来。&lt;/p&gt;
+&lt;p&gt;在原来的博客中记录了很多前端的东西和一些算法的技巧，基本为了找工作。有时间也要把原来的&lt;a href=&quot;http://justjiayu.wordpress.com&quot;&gt;英文博客&lt;/a&gt;migrate过来。&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="life" scheme="http://vincentlau0493.github.io/tags/life/"/>
     
   </entry>
   
