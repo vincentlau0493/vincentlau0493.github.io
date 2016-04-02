@@ -2,7 +2,7 @@
 my technical blog
 
 ## 网站
-[blog.justjiayu.com](blog.justjiayu.com)
+[blog.justjiayu.com](http://blog.justjiayu.com)
 
 ## 提交笔记
 ```
