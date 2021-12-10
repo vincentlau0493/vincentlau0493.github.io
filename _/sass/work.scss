@@ -1,0 +1,198 @@
+@import "compass";
+//@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+
+
+@import "partials/variables";
+@import "partials/mixin";
+
+
+
+@import "partials/base";
+
+//some variables
+$work-primary-color: #7f8c8d;
+$work-secondary-color:#72c9b9;
+$work-third-color:#c6f4d4;
+
+* {
+	color:$work-primary-color;
+}
+
+p {
+	font-size:14px;
+}
+
+.container {
+	padding-top:100px;
+	padding-bottom:130px;
+}
+
+.row {
+	margin-top:12px;
+}
+
+.work-nav {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:8888;
+	//height:80px;
+	//width:100%;
+	background:$work-secondary-color;
+	width:0;
+	overflow:hidden;
+	@include transition(width .75s ease);
+
+	.nav-title {
+		display:block;
+		font-size:30px;
+		font-weight:900;
+		@include small(){
+			font-size:24px;
+		}
+		color:white;
+		text-align:center;
+		margin: 12px 0;
+		@include animation(top-fade-in .25s linear .75s both);
+	}
+	.back-button{
+		display:inline-block;
+		z-index:9999;
+		position:fixed;
+		padding:12px 36px;
+		background: darken($work-secondary-color,5);
+		color:white;
+		line-height: 42px;
+		@include small(){
+			line-height: 34px;
+			padding:12px 24px;
+		}		
+		text-decoration:none;
+		@include transition(all .25s ease);
+
+		&:hover {
+			background: $work-third-color;
+			@include transition(all .25s ease);
+		}
+		@include animation(fade-in .25s linear .75s both);
+	}
+}
+
+
+
+.work-title {
+	letter-spacing: 0px;
+	font-size: 30px;
+	word-spacing: -0.5px;
+	font-weight:900;
+	margin:24px 0;
+	@include animation(left-fade-in .5s linear 1s both);
+
+}
+.work-related {
+	color:$work-secondary-color;
+	font-weight:400;
+	margin:24px 0;
+	@include animation(left-fade-in .5s linear 1.5s both);
+}
+.work-icons {
+	margin:24px 0;
+	span:before {
+		font-size:20px;
+		color:$work-secondary-color;
+		display:inline-block;
+		margin-right:12px;
+
+	}
+	@include animation(left-fade-in .5s linear 1.5s both);
+}
+
+.work-brief {
+	margin:24px 0;
+	@include animation(left-fade-in .5s linear 2s both);
+}
+
+.preview-button {
+	@include animation(left-fade-in .5s linear 2s both);
+}
+
+.work-banner {
+	height:350px;
+	background:url("../img/works/workphase/workphasebanner.jpg") center center no-repeat;
+	background-size:cover;
+	@include small(){
+		height:250px;
+	}
+	@include animation(left-fade-in .5s linear 2.5s both);
+}
+
+.work-subtitle {
+	font-size: 24px;
+	margin:50px 0 18px 0;
+}
+
+.work-experience {
+	color:$work-secondary-color;
+}
+
+.work-button,.work-button:link {
+	display:inline-block;
+	padding:8px 24px;
+	background:$work-secondary-color;
+	color:white;
+	font-size:18px;
+	margin:24px 0;
+	text-decoration:none;
+	@include transition(background .25s ease);
+	&:hover {
+		color:white;
+		background:$work-third-color;
+		@include transition(background .25s ease);
+	}
+}
+
+.nav-button {
+	display:inline-block;
+	position:absolute;
+	bottom:50px;
+	padding:8px 20px;
+	background:$work-secondary-color;
+	color:white;
+	text-decoration:none;
+	@include transition(background .25s ease);
+	&:hover {
+		background:$work-third-color;
+		@include transition(background .25s ease);
+		text-decoration:none;
+	}
+}
+
+.previous-button {
+	@extend .nav-button;
+	left:0;
+	>span {
+		padding-right:4px;
+		color:white;
+	}
+}
+.next-button {
+	@extend .nav-button;
+	right:0;
+	>span {
+		padding-left:4px;
+		color:white;
+
+	}
+}
+
+.quote,.quote:before {
+	font-size:24px;
+	//color:white;
+	opacity:.8;
+	//background:$work-secondary-color;
+}
+
+
+
+

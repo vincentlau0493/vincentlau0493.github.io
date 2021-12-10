@@ -1,0 +1,13 @@
+.typing-box {
+  color:white;
+  //font-size:2.5em;
+  font-weight:400;
+}
+
+.box-cursor {
+  color:white;
+  //font-size:2.5em;
+  font-weight:400;
+  margin-left:.1em;
+  @include transition(opacity .25s ease-in);
+}

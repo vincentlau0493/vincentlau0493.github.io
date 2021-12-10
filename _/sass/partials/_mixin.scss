@@ -1,0 +1,97 @@
+// media query
+
+@mixin breakpoint($point){
+	@if $point == small{
+		@media screen and (max-width: 768px){
+			@content;
+		}
+	}
+	@if $point == medium{
+		@media screen and (min-width: 769px) and (max-width: 991px){
+			@content;
+		}
+	}
+	@if $point == large{
+		@media screen and (min-width: 992px){
+			@content;
+		}
+	}
+}
+
+@mixin small() {
+	@include breakpoint(small) {
+		@content;
+	}
+}
+@mixin medium() {
+	@include breakpoint(medium) {
+		@content;
+	}
+}
+@mixin large(){
+	@include breakpoint(large) {
+		@content;
+	}
+}
+
+//animation
+
+@mixin keyframes($name) {
+	@keyframes $name{
+		@content;
+	}
+	@-webkit-keyframes $name{
+		@content;
+	}
+	@-moz-keyframes $name{
+		@content;
+	}
+	@-ms-keyframes $name{
+		@content;
+	}
+	@-o-keyframes $name{
+		@content;
+	}
+}
+
+@mixin animation($content) {
+	animation : $content;
+	-webkit-animation : $content;
+	-moz-animation : $content;
+	-ms-animation : $content;
+	-o-animation : $content;
+}
+
+
+
+
+
+
+//style mixin----------------------------
+
+//title
+@mixin title-style($font-color:white,$bg-color:$secondary-color,$sub-font-color:$primary-color) {
+	
+	.title {
+		//width:auto;
+		display:inline-block;
+		padding:10px 24px;
+		background: $bg-color;
+		font-size: 40px;
+		color:$font-color;
+		font-weight:600;
+		letter-spacing: 0px;
+		word-spacing: -0.5px;
+	}
+	.sub-title {
+		font-size:18px;
+		color:lighten($sub-font-color,20);
+	}
+
+}
+
+
+
+
+
+

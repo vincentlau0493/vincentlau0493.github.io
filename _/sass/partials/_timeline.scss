@@ -1,0 +1,138 @@
+@mixin break-point($point) {
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+
+$widget-width:768px;
+
+.timeline-container {
+    width:100%;
+    text-align:center;
+    margin:0;
+    margin-top:2em;
+    padding:0;
+
+  ul {
+    //background:red;
+    //border:1px solid white;
+    margin:auto;
+    @include break-point($widget-width) {
+      width:$widget-width;
+    }  
+    
+    padding:0;
+    //border:1px dotted #999;
+    
+    li.timeline-node {
+      z-index:2; 
+      position:relative;
+      list-style-type:none;
+      width:300px;
+      height:auto; 
+      margin:auto;
+      margin-bottom:.1em;
+      text-align:center;
+      @include break-point($widget-width) {
+        width:280px;
+        height:200px;
+        float:left;
+        clear:both;     
+      }  
+      .timeline-title {
+        padding:0;
+        margin:5px;
+        margin-top:15px;
+        color:$third-color;
+      }
+      .timeline-content {
+        padding:0;
+        margin:5px;
+        color:rgba(white,.7);
+        font-weight:200;
+        font-style:italic;
+      }
+      
+      
+      
+      .timeline-line {
+        z-index:-1;        
+        width:4px;
+        height:150px;
+        margin:auto;
+        background:lighten($primary-color,10);
+        
+        @include break-point($widget-width) {
+          @include transform(rotate(-66deg));
+          top:-126px;
+          right:-104px;
+          height:540px;
+          position:absolute;
+        }
+        
+      }
+      @include break-point($widget-width) {
+        &:nth-child(2n) {
+            z-index:2;
+            float:right;
+            .timeline-line {
+               z-index:-1;
+               @include transform(rotate(66deg));
+               right:auto;
+               left:-104px;    
+            }       
+        }      
+      }
+
+
+    }
+  }
+
+  .timeline-progress {
+    opacity:0;
+    width:100%;
+    height:0;
+    background:rgba(white,1);
+    @include transition(all 2s ease-in-out);
+  } 
+
+
+  .timeline-active {
+    opacity:1 !important;
+    height:100% !important;
+  }
+
+  .timeline-circle {
+    font-family:"FontAwesome";
+    text-align:center;
+    font-size:36px;
+    text-decoration:none;
+    line-height:80px;
+    color: $third-color;
+    z-index:20;
+    display:inline-block;
+    width:80px;
+    height:80px;
+    @include border-radius(50%);
+    background:white;
+    @include transition(all .5s ease);
+
+    @media screen and (max-width:$widget-width) {
+      @include transform(scale(1.1));
+    }
+
+
+    &:hover {
+      cursor:pointer;
+      //background:$third-color;
+      //color:white;
+      @include transform(scale(1.1));
+      @include transition(all .25s ease);
+      text-decoration:none;
+    }
+  }
+
+
+}
+

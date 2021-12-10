@@ -1,0 +1,82 @@
+#wrap {
+    position:relative;
+    top:80px;
+    left: 50px;
+    z-index: 1;
+}
+body {
+    background-color: grey;
+    height:530px;
+    width:1000px;
+
+    overflow:hidden;
+}
+#clock {
+    position: relative;
+    top: 12px;
+    left: 50px;
+
+}
+#button {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    padding: 10px;
+    background-color: #787878;
+    width: 60px;
+    height: 15px;
+    text-align: center;
+    font-family: arial;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#button:hover {
+    background-color: #00929f;
+}
+
+#background {
+    position: absolute;
+    top:0;
+    left: -10px;;
+    height:1000px;
+    width:100000px;
+    background-image:url("img/grid.jpg"); background-repeat: x-repeat;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#car {
+    position: relative;
+
+}
+
+#car img {
+    width:150px;
+    z-index: 2;
+}
+.line{
+    position:absolute;
+    left:1300px;
+    height: 130px;
+
+
+}
+.line img {
+    position: relative;
+    width: 130px;
+}
+.line.l1 {
+    top: 100px;
+
+}
+.line.l1 img {
+    left: -300px;
+}
+.line.l2{
+    top:270px;
+}
+.line.l3 {
+    top:440px;
+}

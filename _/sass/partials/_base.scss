@@ -1,0 +1,297 @@
+
+h1 {
+	font-size:64px;
+}
+h2 {
+	font-size:48px;
+}
+h3 {
+	font-size:36px;
+}
+h4 {
+	font-size:24px;
+}
+p {
+	font-size:18px;
+}
+
+img {
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	height:auto;
+}
+
+* {
+	font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	@include box-sizing(border-box);
+	color:$primary-color;
+}
+
+[class*='fa-'] {
+	&:after,&:before {
+		font-family:"FontAwesome"
+	}
+}
+
+.emphasis {
+	color:$third-color;
+}
+
+//--------------icon-----------------
+.my-icon {
+	display:inline-block;
+	font-family:"FontAwesome";
+	font-size:24px;
+	color:$secondary-color;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	@include border-radius(50%);
+	background:white;
+	text-align:center;
+	@include transition(opacity .5s ease);
+	opacity:.5;
+	&:hover {
+		@include transition(opacity .5s ease);
+		opacity:1;
+		cursor:pointer;		
+	}
+}
+
+.radius-icon:before {
+	color:white;
+	font-size:24px;
+	display:inline-block;
+	text-align:center;
+	width:40px;
+	height:40px;
+	line-height:37px;
+	@include border-radius(50%);
+	border:2px solid white;
+	@include transition(all .5s ease);
+}
+
+.rect-icon:before {
+	color:$third-color;
+	background:white;
+	font-size:24px;
+	display:inline-block;
+	text-align:center;
+	width:40px;
+	height:40px;
+	line-height:37px;
+	@include transition(all .5s ease);
+
+}
+
+
+.go-down-arrow {
+	//background:red;
+	text-align:center;
+	font-size:36px;
+	position:absolute;
+	width:100%;
+	bottom:10px;
+	//padding:20px;
+	left:0;
+	>span:before {
+		@include border-radius(50%);
+		width:48px;
+		height:48px;
+		line-height:48px;
+		background:white;
+		display:inline-block;
+		color:$third-color;
+		//border:2px black solid;
+
+		opacity:.6;
+		@include transition(opacity .5s ease);
+
+	}
+	&:hover {
+		cursor:pointer;
+	}
+
+
+	&:hover>span:before {
+		opacity:1;
+		cursor:pointer;
+		@include transition(opacity .5s ease);
+	}
+}
+
+
+
+
+
+//--------------side panel-----------------
+.side-panel {
+	position:absolute;
+	top:0;
+	right:0;
+
+	height:100%;
+
+	z-index:999;
+	//overflow:scroll;
+}
+
+.side-info {
+	@extend .side-panel;
+	//opacity:.7;
+	width:100%;
+	right:-100%;
+
+	//padding:10px 20px;
+	background:lighten($primary-color,85);
+
+	.close-icon {
+		postiion:absolute;
+		left:0;
+		top:0;
+		cursor:pointer;
+		&:before {
+			@extend .rect-icon;
+		}
+
+		&:hover {
+			cursor:pointer;
+			&:before {
+				color:white;
+				background:$third-color;
+				@include transition(all .5s ease);
+			}		
+		}
+	}
+
+	.sidebar-title {
+		text-align:center;
+		margin:24px 0;
+		font-size:48px;
+		@include small(){
+			margin:12px 0;
+			margin-top:0px;
+			font-size:36px;
+		}
+		color:$third-color;
+	}
+	.sidebar-content {
+		color:lighten($primary-color,50);
+	}
+	.sidebar-img {
+		height:500px;
+		img {
+			position:relative;
+			top:-50px;
+		}
+	}
+
+
+}
+
+
+//---------including style---------------------
+.title-widget {
+	margin-top:64px;
+	margin-bottom:80px;
+	@include small(){
+		margin-bottom:36px;
+	}
+	text-align:center;
+	@include title-style();
+
+}
+
+
+
+
+
+.title-2 {
+	color:$secondary-color;
+	text-align:center;
+	margin-top:80px;
+	margin-bottom:24px;
+	font-size:20px;
+	font-weight:400;
+	color:white;
+	>span {
+		display:inline-block;
+		padding:2px 18px;
+		background:red;
+		@include border-radius(24px);
+
+	}
+}
+
+
+.my-button,.my-button:link {
+	display:inline-block;
+	text-decoration:none;
+	padding:4px 24px;
+	border: 4px solid $third-color;
+	color:$third-color;
+	font-size:24px;
+	font-weight:600;
+	cursor:pointer;
+	@include transition(all .5s ease);
+	&:hover {
+		background:white;
+		border: 4px solid white;
+		//color:white;
+		@include transition(all .5s ease);
+	}
+}
+
+
+
+
+
+section {
+	padding:18px 0 86px 0;
+}
+
+
+
+
+
+//keyframes
+
+@include keyframes(fade-in){
+	
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+@include keyframes(left-fade-in){
+	
+	from {
+		@include transform(translateX(-20px));
+		opacity: 0;
+	}
+	to {
+		@include transform(translateX(0px));
+		opacity:1;
+	}
+}
+
+@include keyframes(top-fade-in){
+	
+	from {
+		@include transform(translateY(-10px));
+		opacity: 0;
+	}
+	to {
+		@include transform(translateY(0px));
+		opacity:1;
+	}
+}
+
+
+
+
+

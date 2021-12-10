@@ -1,12 +1,7 @@
-# 我的博客
-my technical blog
+# Just Jiayu
 
-## 网站
-[blog.justjiayu.com](http://blog.justjiayu.com)
+>The website is available right now! Please visit: http://www.justjiayu.com. 
 
-## 提交笔记
-```
-$ hexo s  # start a local server
-$ hexo g  # generate static files
-$ hexo d  # deploy blogs to github
-```
+>Also here is my blog: http://justjiayu.wordpress.com
+
+It is a responsive website based on **Bootstrap**, **SCSS** and **Grunt.js**.
